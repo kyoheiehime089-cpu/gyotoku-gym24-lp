@@ -1,0 +1,25 @@
+<svg width="720" height="150" viewBox="0 0 720 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">利用開始までの流れを表すアイコン</title>
+  <desc id="desc">スマホ、LINE、カレンダー、ジムのアイコンが線でつながっています。</desc>
+  <rect width="720" height="150" rx="8" fill="#FFFFFF"/>
+  <path d="M148 75H226" stroke="#DCE5EA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M314 75H392" stroke="#DCE5EA" stroke-width="4" stroke-linecap="round"/>
+  <path d="M480 75H558" stroke="#DCE5EA" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="80" cy="75" r="46" fill="#E8F5F5"/>
+  <circle cx="246" cy="75" r="46" fill="#FFF4F1"/>
+  <circle cx="412" cy="75" r="46" fill="#E8F5F5"/>
+  <circle cx="578" cy="75" r="46" fill="#FFF4F1"/>
+  <rect x="62" y="38" width="36" height="74" rx="8" stroke="#2D8C8C" stroke-width="5"/>
+  <path d="M73 101H87" stroke="#2D8C8C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M218 59C218 47.954 230.536 39 246 39C261.464 39 274 47.954 274 59C274 70.046 261.464 79 246 79C242.25 79 238.676 78.474 235.412 77.522L221 84L225.714 72.842C220.924 69.226 218 64.364 218 59Z" stroke="#F46A4E" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M231 58H260" stroke="#F46A4E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M232 68H251" stroke="#F46A4E" stroke-width="5" stroke-linecap="round"/>
+  <rect x="382" y="43" width="60" height="62" rx="8" stroke="#2D8C8C" stroke-width="5"/>
+  <path d="M382 62H442" stroke="#2D8C8C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M398 35V49M426 35V49" stroke="#2D8C8C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M399 79H425" stroke="#2D8C8C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M399 91H416" stroke="#2D8C8C" stroke-width="5" stroke-linecap="round"/>
+  <path d="M536 82H620" stroke="#F46A4E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M552 67V97M604 67V97" stroke="#F46A4E" stroke-width="8" stroke-linecap="round"/>
+  <path d="M566 61H590V103H566V61Z" stroke="#F46A4E" stroke-width="5" stroke-linejoin="round"/>
+</svg>
