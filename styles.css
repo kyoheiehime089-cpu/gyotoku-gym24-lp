@@ -185,13 +185,13 @@ main {
 }
 
 .hero__image {
-  filter: brightness(1.08) saturate(1.04);
+  filter: brightness(1.12) saturate(1.04);
 }
 
 .hero__shade {
   background:
-    linear-gradient(90deg, rgba(12, 32, 50, 0.78) 0%, rgba(12, 32, 50, 0.6) 43%, rgba(12, 32, 50, 0.08) 100%),
-    linear-gradient(180deg, rgba(12, 32, 50, 0.04) 0%, rgba(12, 32, 50, 0.58) 100%);
+    linear-gradient(90deg, rgba(12, 32, 50, 0.72) 0%, rgba(12, 32, 50, 0.52) 43%, rgba(12, 32, 50, 0.05) 100%),
+    linear-gradient(180deg, rgba(12, 32, 50, 0.02) 0%, rgba(12, 32, 50, 0.5) 100%);
 }
 
 .hero__inner,
@@ -627,9 +627,36 @@ main {
   background: var(--gray);
 }
 
+.price-row--recommended {
+  position: relative;
+  border: 2px solid rgba(244, 106, 78, 0.72);
+  background: linear-gradient(180deg, #fff9f5 0%, #fff1eb 100%);
+  box-shadow: 0 14px 34px rgba(244, 106, 78, 0.18);
+}
+
 .price-row--unlimited {
-  border: 1px solid rgba(244, 106, 78, 0.22);
-  background: #fff4f1;
+  border: 1px solid rgba(24, 50, 75, 0.12);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(45, 140, 140, 0.04);
+}
+
+.price-row__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.price-row__head em {
+  flex: 0 0 auto;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: var(--coral);
+  color: var(--white);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .price-row span {
@@ -648,6 +675,10 @@ main {
   color: var(--ink-muted);
   font-size: 13px;
   font-weight: 800;
+}
+
+.price-row--recommended small {
+  color: var(--navy);
 }
 
 .campaign-box {
@@ -831,6 +862,32 @@ main {
   color: var(--teal);
   content: "・";
   font-weight: 900;
+}
+
+.child-side {
+  display: grid;
+  gap: 16px;
+}
+
+.child-visual {
+  margin: 0;
+}
+
+.child-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 16px 40px rgba(24, 50, 75, 0.1);
+}
+
+.child-visual figcaption {
+  margin-top: 10px;
+  color: var(--navy);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.7;
 }
 
 .child-card {
@@ -1045,8 +1102,8 @@ main {
 
   .hero__shade {
     background:
-      linear-gradient(180deg, rgba(12, 32, 50, 0.08) 0%, rgba(12, 32, 50, 0.68) 63%, rgba(12, 32, 50, 0.84) 100%),
-      linear-gradient(90deg, rgba(12, 32, 50, 0.28), rgba(12, 32, 50, 0.04));
+      linear-gradient(180deg, rgba(12, 32, 50, 0.06) 0%, rgba(12, 32, 50, 0.62) 63%, rgba(12, 32, 50, 0.78) 100%),
+      linear-gradient(90deg, rgba(12, 32, 50, 0.2), rgba(12, 32, 50, 0.03));
   }
 
   .hero__image {
