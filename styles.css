@@ -675,6 +675,21 @@ main {
   padding: 24px;
 }
 
+.campaign-panel__tag {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 34px;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: var(--coral);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
 .campaign-panel__lead {
   margin-bottom: 0;
   color: var(--navy);
