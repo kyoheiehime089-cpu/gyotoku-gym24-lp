@@ -23,7 +23,68 @@
         "@type": "Gym",
         "name": "行徳ジム24",
         "description": "完全個室・貸切予約制の24時間セルフジム",
-        "openingHours": "Mo-Su 00:00-23:59",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday"],
+            "opens": "00:00",
+            "closes": "08:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday"],
+            "opens": "10:10",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday"],
+            "opens": "22:10",
+            "closes": "23:59"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Wednesday", "Friday"],
+            "opens": "00:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Wednesday", "Friday"],
+            "opens": "22:10",
+            "closes": "23:59"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Thursday",
+            "opens": "00:00",
+            "closes": "11:30"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Thursday",
+            "opens": "13:10",
+            "closes": "20:15"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Thursday",
+            "opens": "21:55",
+            "closes": "23:59"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "07:40"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Saturday", "Sunday"],
+            "opens": "13:40",
+            "closes": "23:59"
+          }
+        ],
         "address": {
           "@type": "PostalAddress",
           "addressRegion": "千葉県",
@@ -99,7 +160,7 @@
             </article>
             <article class="pain-card">
               <h3>自由すぎて後回しになる</h3>
-              <p>いつでも行けると思うほど、予定に入れづらくなり、気づくと足が遠のいてしまう。</p>
+              <p>自由度が高いほど予定に入れづらくなり、気づくと足が遠のいてしまう。</p>
             </article>
           </div>
         </div>
@@ -147,36 +208,82 @@
         </div>
       </section>
 
-      <section class="section" id="price" data-reveal>
+      <section class="section" id="pricing" data-reveal>
         <div class="section__inner">
           <p class="section-label">料金</p>
           <h2>料金プラン</h2>
           <div class="price-grid">
             <article class="price-card">
               <h3>ベーシックプラン</h3>
-              <p>一人で自分のペースで使いたい方向け</p>
+              <p>お一人で自分のペースで通いたい方向け</p>
               <div class="price-row">
                 <span>月4回</span>
-                <strong>9,800円</strong>
+                <strong>月額9,800円</strong>
               </div>
               <div class="price-row">
                 <span>月8回</span>
-                <strong>14,800円</strong>
+                <strong>月額14,800円</strong>
+              </div>
+              <div class="price-row price-row--unlimited">
+                <span>通い放題</span>
+                <strong>月額40,000円</strong>
               </div>
             </article>
             <article class="price-card price-card--accent">
               <h3>ファミリープラン</h3>
-              <p>お連れ様と一緒に使いたい方向け</p>
+              <p>ご夫婦・カップル・親子・ご友人など、2人で使いたい方向け</p>
               <div class="price-row">
                 <span>月4回</span>
-                <strong>10,800円</strong>
+                <strong>月額10,800円</strong>
               </div>
               <div class="price-row">
                 <span>月8回</span>
-                <strong>15,800円</strong>
+                <strong>月額15,800円</strong>
               </div>
+              <div class="price-row price-row--unlimited">
+                <span>通い放題</span>
+                <strong>月額41,000円</strong>
+              </div>
+              <ul class="mini-list">
+                <li>お連れ様1名まで無料</li>
+                <li>月の利用回数はシェア可能</li>
+                <li>一緒に来ても消費回数は1回分</li>
+              </ul>
             </article>
           </div>
+          <p class="plan-note">
+            通い放題プランも、ご利用可能時間内の空き枠から予約して利用できます。
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--soft" data-reveal>
+        <div class="section__inner">
+          <p class="section-label">利用時間</p>
+          <h2>ご利用可能時間</h2>
+          <div class="hours-grid">
+            <article class="hours-card">
+              <h3>月・火</h3>
+              <p>0:00〜8:30／10:10〜18:00／22:10〜24:00</p>
+            </article>
+            <article class="hours-card">
+              <h3>水・金</h3>
+              <p>0:00〜18:00／22:10〜24:00</p>
+            </article>
+            <article class="hours-card">
+              <h3>木</h3>
+              <p>0:00〜11:30／13:10〜20:15／21:55〜24:00</p>
+            </article>
+            <article class="hours-card">
+              <h3>土・日</h3>
+              <p>0:00〜7:40／13:40〜24:00</p>
+            </article>
+            <article class="hours-card">
+              <h3>祝日</h3>
+              <p>0:00〜8:30／13:40〜24:00</p>
+            </article>
+          </div>
+          <p class="small-note">※上記時間内の空き枠から予約してご利用いただけます。</p>
         </div>
       </section>
 
@@ -192,12 +299,39 @@
           <p class="section-label">ファミリープラン</p>
           <h2>一人では不安な方も、誰かと一緒なら始めやすい。</h2>
           <ul class="check-list check-list--large">
-            <li>お連れ様1人まで無料</li>
-            <li>利用回数をシェアできます</li>
+            <li>お連れ様1名まで無料</li>
+            <li>月の利用回数はシェア可能</li>
+            <li>一緒に来ても消費回数は1回分</li>
           </ul>
           <p>
             夫婦、カップル、親子、友人など、身近な人と一緒に使えるプランです。一人で始める不安を減らしたい方に向いています。
           </p>
+        </div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="section__inner two-column">
+          <div>
+            <p class="section-label">貸切ならでは</p>
+            <h2>お子様連れでもご利用いただけます</h2>
+            <p>
+              行徳ジム24は完全予約制・貸切利用のセルフジムです。周りの目を気にせず使えるため、小さなお子様がいる方でも一緒に来店しやすい環境です。
+            </p>
+            <div class="child-quote-list" aria-label="お子様連れの方の不安">
+              <span>子どもがいるからジムに通いづらい</span>
+              <span>普通のジムだと周りに迷惑をかけないか不安</span>
+              <span>自分の運動時間をなかなか作れない</span>
+            </div>
+            <p>
+              そんな方でも、予約した時間は貸切で使えるので、自分のペースでトレーニングできます。
+            </p>
+          </div>
+          <div class="child-card">
+            <span class="child-card__icon" aria-hidden="true">OK</span>
+            <h3>安全面について</h3>
+            <p>※安全のため、お子様がトレーニング器具に触れないようご注意ください。</p>
+            <p>※お子様の安全管理は保護者様にお願いいたします。</p>
+          </div>
         </div>
       </section>
 
@@ -282,7 +416,7 @@
             </details>
             <details>
               <summary>一人で使うのが不安です。</summary>
-              <p>ファミリープランなら、お連れ様1人まで無料で一緒にご利用いただけます。</p>
+              <p>ファミリープランなら、お連れ様1名まで無料で一緒にご利用いただけます。</p>
             </details>
             <details>
               <summary>予約は毎回同じ時間に決まりますか？</summary>
