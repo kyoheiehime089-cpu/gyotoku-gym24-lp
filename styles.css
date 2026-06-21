@@ -203,15 +203,10 @@ main {
 }
 
 .hero__inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
-  grid-template-areas: "copy campaign";
-  gap: clamp(22px, 4vw, 48px);
-  align-items: end;
+  display: block;
 }
 
 .hero__copy {
-  grid-area: copy;
   max-width: 680px;
 }
 
@@ -267,36 +262,41 @@ main {
   font-weight: 800;
 }
 
-.hero-campaign {
-  grid-area: campaign;
+.pricing-campaign {
   display: grid;
-  gap: 12px;
-  width: min(100%, 430px);
-  padding: clamp(18px, 3vw, 26px);
-  border: 1px solid rgba(255, 255, 255, 0.72);
+  gap: 14px;
+  margin-top: 24px;
+  padding: 24px;
+  border: 1px solid rgba(244, 106, 78, 0.28);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 24px 58px rgba(12, 32, 50, 0.26);
+  background: linear-gradient(180deg, #fffaf7 0%, #ffffff 100%);
+  box-shadow: 0 16px 40px rgba(24, 50, 75, 0.1);
   color: var(--navy);
-  backdrop-filter: blur(8px);
 }
 
-.hero-campaign__title,
-.hero-campaign__limit,
-.hero-campaign__main,
-.hero-campaign__note,
-.hero-campaign__fee p {
+.pricing-campaign__eyebrow,
+.pricing-campaign__title,
+.pricing-campaign__limit,
+.pricing-campaign__main,
+.pricing-campaign__note,
+.pricing-campaign__fee p {
   margin-bottom: 0;
 }
 
-.hero-campaign__title {
+.pricing-campaign__eyebrow {
+  color: var(--coral-dark);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.pricing-campaign__title {
   color: var(--teal-dark);
-  font-size: clamp(18px, 2.3vw, 25px);
+  font-size: clamp(21px, 3vw, 30px);
   font-weight: 900;
   line-height: 1.35;
 }
 
-.hero-campaign__limit {
+.pricing-campaign__limit {
   display: inline-flex;
   width: fit-content;
   min-height: 36px;
@@ -310,35 +310,36 @@ main {
   line-height: 1.2;
 }
 
-.hero-campaign__main {
+.pricing-campaign__main {
   color: var(--navy);
-  font-size: clamp(24px, 3.5vw, 38px);
+  font-size: clamp(20px, 2.6vw, 28px);
   font-weight: 900;
-  line-height: 1.22;
+  line-height: 1.4;
 }
 
-.hero-campaign__fees {
+.pricing-campaign__fees {
   display: grid;
-  gap: 8px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
 }
 
-.hero-campaign__fee {
+.pricing-campaign__fee {
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
+  grid-template-columns: minmax(80px, auto) minmax(0, 1fr);
   gap: 10px;
   align-items: center;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border-radius: 8px;
   background: #fff4f1;
 }
 
-.hero-campaign__fee span {
+.pricing-campaign__fee span {
   color: var(--navy);
   font-size: 13px;
   font-weight: 900;
 }
 
-.hero-campaign__fee p {
+.pricing-campaign__fee p {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
@@ -348,30 +349,30 @@ main {
   font-weight: 900;
 }
 
-.hero-campaign__fee del {
+.pricing-campaign__fee del {
   color: rgba(24, 50, 75, 0.55);
   font-size: 14px;
   text-decoration-thickness: 2px;
 }
 
-.hero-campaign__fee em {
+.pricing-campaign__fee em {
   color: var(--teal-dark);
   font-style: normal;
 }
 
-.hero-campaign__fee strong {
+.pricing-campaign__fee strong {
   color: var(--coral-dark);
   font-size: 28px;
   line-height: 1;
 }
 
-.hero-campaign__extras {
+.pricing-campaign__extras {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.hero-campaign__extras span {
+.pricing-campaign__extras span {
   display: inline-flex;
   align-items: center;
   min-height: 31px;
@@ -383,15 +384,28 @@ main {
   font-weight: 900;
 }
 
-.hero-campaign__note {
+.pricing-campaign__note {
   color: rgba(24, 50, 75, 0.84);
   font-size: 13px;
   font-weight: 700;
   line-height: 1.7;
 }
 
-.hero-campaign__cta {
-  width: 100%;
+.pricing-campaign__cta {
+  width: min(100%, 360px);
+}
+
+#pricing {
+  scroll-margin-top: 72px;
+}
+
+.anchor-alias {
+  display: block;
+  position: relative;
+  top: -72px;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 
 .campaign-strip {
@@ -1389,27 +1403,20 @@ main {
     padding: 82px 18px 30px;
   }
 
-  .hero__inner {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "campaign"
-      "copy";
-    gap: 18px;
-    align-items: start;
-  }
-
-  .hero-campaign {
-    width: 100%;
-    max-width: 520px;
+  .pricing-campaign {
     gap: 10px;
     padding: 18px;
   }
 
-  .hero-campaign__main {
+  .pricing-campaign__main {
     font-size: 26px;
   }
 
-  .hero-campaign__fee strong {
+  .pricing-campaign__fees {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-campaign__fee strong {
     font-size: 26px;
   }
 
@@ -1572,35 +1579,35 @@ main {
     line-height: 1.5;
   }
 
-  .hero-campaign {
+  .pricing-campaign {
     gap: 9px;
     padding: 16px;
   }
 
-  .hero-campaign__title {
+  .pricing-campaign__title {
     font-size: 18px;
   }
 
-  .hero-campaign__limit {
+  .pricing-campaign__limit {
     min-height: 32px;
     padding: 7px 11px;
     font-size: 13px;
   }
 
-  .hero-campaign__main {
+  .pricing-campaign__main {
     font-size: 23px;
   }
 
-  .hero-campaign__fee {
+  .pricing-campaign__fee {
     grid-template-columns: 82px minmax(0, 1fr);
     padding: 9px 10px;
   }
 
-  .hero-campaign__fee strong {
+  .pricing-campaign__fee strong {
     font-size: 24px;
   }
 
-  .hero-campaign__note {
+  .pricing-campaign__note {
     font-size: 12px;
     line-height: 1.55;
   }

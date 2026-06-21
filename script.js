@@ -117,7 +117,7 @@ const renderCampaign = (campaign) => {
   fees.replaceChildren(
     ...campaign.fees.map((fee) => {
       const item = document.createElement("div");
-      item.className = "hero-campaign__fee";
+      item.className = "pricing-campaign__fee";
 
       const label = document.createElement("span");
       label.textContent = fee.label;

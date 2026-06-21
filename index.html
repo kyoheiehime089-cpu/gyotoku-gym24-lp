@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/images/fv_private_gym_hero.png" />
     <link rel="preload" as="image" href="./assets/images/fv_private_gym_hero.png" />
-    <link rel="stylesheet" href="./styles.css?v=14" />
+    <link rel="stylesheet" href="./styles.css?v=17" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -129,33 +129,17 @@
             <div class="hero__badges" aria-label="サービス特徴">
               <span>完全個室</span>
               <span>貸切予約制</span>
-              <span>月4回・月8回</span>
+              <span>24時間セルフジム</span>
+            </div>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#" data-line-cta>
+                <span>今すぐ見学予約をする</span>
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M5 12h12m-5-5 5 5-5 5" />
+                </svg>
+              </a>
             </div>
           </div>
-
-          <aside id="campaign" class="hero-campaign" data-campaign-panel aria-label="キャンペーン">
-            <p class="hero-campaign__title" data-campaign-title>6月プレオープン先行受付中</p>
-            <p class="hero-campaign__limit" data-campaign-subtitle>先着10名様限定</p>
-            <p class="hero-campaign__main" data-campaign-lead>
-              6月中にご入会の方は、継続期間中ずっと月会費1,000円OFF
-            </p>
-            <div class="hero-campaign__fees" data-campaign-fees>
-              <div class="hero-campaign__fee">
-                <span>入会金</span>
-                <p><del>30,000円</del><em>→</em><strong>0円</strong></p>
-              </div>
-              <div class="hero-campaign__fee">
-                <span>事務手数料</span>
-                <p><del>3,000円</del><em>→</em><strong>0円</strong></p>
-              </div>
-            </div>
-            <div class="hero-campaign__extras" data-campaign-extras>
-              <span>初月0円</span>
-              <span>2・3か月目 各1,000円</span>
-            </div>
-            <p class="hero-campaign__note" data-campaign-note hidden></p>
-            <a class="button button--primary hero-campaign__cta" href="#" data-line-cta data-campaign-cta>今すぐ見学予約をする</a>
-          </aside>
         </div>
       </section>
 
@@ -221,8 +205,9 @@
         </div>
       </section>
 
-      <section id="price" class="section" data-reveal>
+      <section id="pricing" class="section" data-reveal>
         <div class="section__inner">
+          <span id="price" class="anchor-alias" aria-hidden="true"></span>
           <h2>料金プラン</h2>
           <div class="price-grid">
             <article class="price-card">
@@ -277,13 +262,37 @@
           <p class="plan-note">
             通い放題プランも、ご利用可能時間内の空き枠から予約して利用できます。
           </p>
-          <div class="initial-fees" aria-label="通常の初期費用">
-            <h3>通常の初期費用</h3>
+          <div class="initial-fees" aria-label="入会金・事務手数料">
+            <h3>入会金・事務手数料</h3>
             <div class="initial-fees__grid">
               <p><span>入会金</span><strong>30,000円</strong></p>
               <p><span>事務手数料</span><strong>3,000円</strong></p>
             </div>
           </div>
+          <aside id="campaign" class="pricing-campaign" data-campaign-panel aria-label="キャンペーン適用時の案内">
+            <p class="pricing-campaign__eyebrow">今月キャンペーン適用で</p>
+            <h3 class="pricing-campaign__title" data-campaign-title>6月プレオープン先行受付中</h3>
+            <p class="pricing-campaign__limit" data-campaign-subtitle>先着10名様限定</p>
+            <p class="pricing-campaign__main" data-campaign-lead>
+              6月中にご入会の方は、継続期間中ずっと月会費1,000円OFF
+            </p>
+            <div class="pricing-campaign__fees" data-campaign-fees>
+              <div class="pricing-campaign__fee">
+                <span>入会金</span>
+                <p><del>30,000円</del><em>→</em><strong>0円</strong></p>
+              </div>
+              <div class="pricing-campaign__fee">
+                <span>事務手数料</span>
+                <p><del>3,000円</del><em>→</em><strong>0円</strong></p>
+              </div>
+            </div>
+            <div class="pricing-campaign__extras" data-campaign-extras>
+              <span>初月0円</span>
+              <span>2・3か月目 各1,000円</span>
+            </div>
+            <p class="pricing-campaign__note" data-campaign-note hidden></p>
+            <a class="button button--primary pricing-campaign__cta" href="#" data-line-cta data-campaign-cta>今すぐ見学予約をする</a>
+          </aside>
         </div>
       </section>
 
@@ -570,6 +579,6 @@
       </a>
     </nav>
 
-    <script src="./script.js?v=15"></script>
+    <script src="./script.js?v=17"></script>
   </body>
 </html>
