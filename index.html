@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/images/fv_private_gym_hero.png" />
     <link rel="preload" as="image" href="./assets/images/fv_private_gym_hero.png" />
-    <link rel="stylesheet" href="./styles.css?v=9" />
+    <link rel="stylesheet" href="./styles.css?v=14" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -119,25 +119,43 @@
         />
         <div class="hero__shade" aria-hidden="true"></div>
         <div class="hero__inner">
-          <p class="hero__kicker">7月グランドオープン / 6月プレオープン先行受付中</p>
-          <h1 id="hero-title">普通の24時間ジムで、続かなかった方へ。</h1>
-          <p class="hero__sub">「いつでも行ける」は便利。<br />でも、自由すぎると続かないこともあります。</p>
-          <p class="hero__text">
-            行徳ジム24は、完全個室・貸切予約制。人目や混雑を気にせず、予約した時間に自分のペースで使える24時間セルフジムです。
-          </p>
-          <div class="hero__badges" aria-label="サービス特徴">
-            <span>完全個室</span>
-            <span>貸切予約制</span>
-            <span>月4回・月8回</span>
+          <div class="hero__copy">
+            <p class="hero__kicker">完全個室・貸切予約制の24時間セルフジム</p>
+            <h1 id="hero-title">普通の24時間ジムで、続かなかった方へ。</h1>
+            <p class="hero__sub">「いつでも行ける」は便利。<br />でも、自由すぎると続かないこともあります。</p>
+            <p class="hero__text">
+              行徳ジム24は、完全個室・貸切予約制。人目や混雑を気にせず、予約した時間に自分のペースで使える24時間セルフジムです。
+            </p>
+            <div class="hero__badges" aria-label="サービス特徴">
+              <span>完全個室</span>
+              <span>貸切予約制</span>
+              <span>月4回・月8回</span>
+            </div>
           </div>
-          <div class="hero__actions">
-            <a class="button button--primary" href="#" data-line-cta>
-              <span>今すぐ見学予約をする</span>
-              <svg aria-hidden="true" viewBox="0 0 24 24">
-                <path d="M5 12h12m-5-5 5 5-5 5" />
-              </svg>
-            </a>
-          </div>
+
+          <aside id="campaign" class="hero-campaign" data-campaign-panel aria-label="キャンペーン">
+            <p class="hero-campaign__title" data-campaign-title>6月プレオープン先行受付中</p>
+            <p class="hero-campaign__limit" data-campaign-subtitle>先着10名様限定</p>
+            <p class="hero-campaign__main" data-campaign-lead>
+              6月中にご入会の方は、継続期間中ずっと月会費1,000円OFF
+            </p>
+            <div class="hero-campaign__fees" data-campaign-fees>
+              <div class="hero-campaign__fee">
+                <span>入会金</span>
+                <p><del>30,000円</del><em>→</em><strong>0円</strong></p>
+              </div>
+              <div class="hero-campaign__fee">
+                <span>事務手数料</span>
+                <p><del>3,000円</del><em>→</em><strong>0円</strong></p>
+              </div>
+            </div>
+            <div class="hero-campaign__extras" data-campaign-extras>
+              <span>初月0円</span>
+              <span>2・3か月目 各1,000円</span>
+            </div>
+            <p class="hero-campaign__note" data-campaign-note hidden></p>
+            <a class="button button--primary hero-campaign__cta" href="#" data-line-cta data-campaign-cta>今すぐ見学予約をする</a>
+          </aside>
         </div>
       </section>
 
@@ -251,7 +269,6 @@
                 <small>たくさん通いたい方向けの上位プラン</small>
               </div>
               <ul class="mini-list">
-                <li>お連れ様1名まで無料</li>
                 <li>月の利用回数はシェア可能</li>
                 <li>一緒に来ても消費回数は1回分</li>
               </ul>
@@ -260,6 +277,13 @@
           <p class="plan-note">
             通い放題プランも、ご利用可能時間内の空き枠から予約して利用できます。
           </p>
+          <div class="initial-fees" aria-label="通常の初期費用">
+            <h3>通常の初期費用</h3>
+            <div class="initial-fees__grid">
+              <p><span>入会金</span><strong>30,000円</strong></p>
+              <p><span>事務手数料</span><strong>3,000円</strong></p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -434,25 +458,6 @@
         </div>
       </section>
 
-      <section id="campaign" class="section section--campaign" data-reveal>
-        <div class="section__inner">
-          <h2>7月グランドオープン<br />6月プレオープン先行受付中</h2>
-          <div class="campaign-panel">
-            <p class="campaign-panel__tag">先着10名限定</p>
-            <p class="campaign-panel__lead">
-              6月中にご入会の方は、継続期間中ずっと月会費1,000円OFF
-            </p>
-            <div class="benefit-grid">
-              <span>入会金0円</span>
-              <span>事務手数料0円</span>
-              <span>初月0円</span>
-              <span>2・3か月目 各1,000円</span>
-            </div>
-          </div>
-          <a class="button button--primary section-cta" href="#" data-line-cta>今すぐ見学予約をする</a>
-        </div>
-      </section>
-
       <section class="section" data-reveal>
         <div class="section__inner two-column">
           <div>
@@ -565,6 +570,6 @@
       </a>
     </nav>
 
-    <script src="./script.js"></script>
+    <script src="./script.js?v=14"></script>
   </body>
 </html>
