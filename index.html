@@ -327,6 +327,40 @@
             <p>
               そんな方でも、予約した時間は貸切で使えるので、自分のペースでトレーニングできます。
             </p>
+            <div class="family-support-list" aria-label="お子様連れや近隣利用のサポート">
+              <article class="family-support-card">
+                <div class="family-support-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <path d="M18 27h25c4 0 7 3 7 7v4H24c-6 0-11-5-11-11v-2h5v2Z" />
+                    <path d="M20 25c2-9 10-15 20-15h4v15H20Z" />
+                    <path d="M13 25h-2c-4 0-7-3-7-7" />
+                    <circle cx="22" cy="49" r="6" />
+                    <circle cx="48" cy="49" r="6" />
+                    <path d="M29 38 22 49m16-11 10 11" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>ベビーカー置き場あり</h3>
+                  <p>ベビーカーで来店される方も利用しやすいよう、置き場をご用意しています。</p>
+                </div>
+              </article>
+              <article class="family-support-card">
+                <div class="family-support-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <circle cx="18" cy="46" r="9" />
+                    <circle cx="48" cy="46" r="9" />
+                    <path d="M18 46h12l8-18h-9m9 18-14-20h-7m21 20 10-18h6" />
+                    <path d="M42 18h10m-4 0 5 10" />
+                    <path d="M12 15h17" />
+                    <path d="M15 11v8" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>駐輪場あり</h3>
+                  <p>自転車で来店しやすいよう、駐輪場をご用意しています。近隣の方も気軽に通いやすい環境です。</p>
+                </div>
+              </article>
+            </div>
           </div>
           <div class="child-side">
             <figure class="child-visual">
@@ -358,10 +392,52 @@
             </p>
           </div>
           <div class="amenity-card__visual">
-            <img
-              src="./assets/wifi-speaker-illustration.svg"
-              alt="Wi‑Fiとスピーカー完備のイラスト"
-            />
+            <svg class="amenity-illustration" viewBox="0 0 720 520" role="img" aria-label="Wi‑Fiとスピーカー完備のイラスト">
+              <defs>
+                <linearGradient id="amenity-bg" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#ffffff" />
+                  <stop offset="1" stop-color="#eef7f5" />
+                </linearGradient>
+                <linearGradient id="amenity-screen" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stop-color="#2d8c8c" />
+                  <stop offset="1" stop-color="#18324b" />
+                </linearGradient>
+              </defs>
+              <rect width="720" height="520" rx="36" fill="url(#amenity-bg)" />
+              <circle cx="592" cy="108" r="72" fill="#fff4d8" />
+              <circle cx="132" cy="418" r="88" fill="#e4f2ef" />
+              <path d="M74 138c58-66 176-86 250-42 43 25 83 28 128 8 70-31 152-11 194 47" fill="none" stroke="#d9e8e8" stroke-width="16" stroke-linecap="round" />
+              <g>
+                <rect x="246" y="136" width="230" height="284" rx="34" fill="#ffffff" />
+                <rect x="270" y="176" width="182" height="190" rx="22" fill="url(#amenity-screen)" />
+                <circle cx="361" cy="394" r="12" fill="#dce8ea" />
+                <path d="M312 279c31-31 81-31 112 0" fill="none" stroke="#ffffff" stroke-width="15" stroke-linecap="round" />
+                <path d="M337 307c17-17 45-17 62 0" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" />
+                <circle cx="368" cy="333" r="10" fill="#ffffff" />
+              </g>
+              <g>
+                <rect x="88" y="214" width="134" height="172" rx="30" fill="#ffffff" />
+                <rect x="117" y="242" width="76" height="116" rx="20" fill="#18324b" />
+                <circle cx="155" cy="300" r="24" fill="#2d8c8c" />
+                <circle cx="155" cy="300" r="10" fill="#fff4d8" />
+                <path d="M214 265c22 18 22 52 0 70" fill="none" stroke="#2d8c8c" stroke-width="12" stroke-linecap="round" />
+                <path d="M238 240c42 39 42 98 0 137" fill="none" stroke="#a9d9d3" stroke-width="12" stroke-linecap="round" />
+              </g>
+              <g>
+                <rect x="508" y="238" width="112" height="146" rx="28" fill="#ffffff" />
+                <path d="M535 284h38l26-25v105l-26-25h-38z" fill="#18324b" />
+                <path d="M612 292c15 15 15 40 0 55" fill="none" stroke="#e9bd52" stroke-width="12" stroke-linecap="round" />
+              </g>
+              <path d="M501 112c40-33 98-33 138 0" fill="none" stroke="#18324b" stroke-width="15" stroke-linecap="round" />
+              <path d="M531 145c22-18 56-18 78 0" fill="none" stroke="#2d8c8c" stroke-width="13" stroke-linecap="round" />
+              <circle cx="570" cy="174" r="11" fill="#e9bd52" />
+              <path d="M181 150v68c0 13-12 24-27 24s-27-11-27-24 12-24 27-24c6 0 11 2 16 4v-58z" fill="#e9bd52" />
+              <path d="M601 170v60c0 12-11 22-25 22s-25-10-25-22 11-22 25-22c5 0 10 1 14 4v-50z" fill="#e9bd52" />
+              <circle cx="230" cy="102" r="9" fill="#2d8c8c" />
+              <circle cx="654" cy="308" r="8" fill="#2d8c8c" />
+              <circle cx="95" cy="181" r="7" fill="#2d8c8c" />
+              <circle cx="478" cy="441" r="8" fill="#2d8c8c" />
+            </svg>
           </div>
         </div>
       </section>
