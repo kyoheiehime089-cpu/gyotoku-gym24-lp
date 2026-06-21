@@ -77,14 +77,18 @@ const getCampaignContent = (now = new Date()) => {
 
 const getCampaignEvaluationDate = () => {
   const params = new URLSearchParams(window.location.search);
-  const previewDate = params.get("campaign_preview_date");
-  const isLocalPreview = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+  const previewMonth = params.get("campaign_preview_month");
+  const match = /^(\d{4})-(0[1-9]|1[0-2])$/.exec(previewMonth || "");
 
-  if (isLocalPreview && previewDate) {
-    const date = new Date(previewDate);
-    if (!Number.isNaN(date.getTime())) return date;
+  if (match) {
+    const year = Number(match[1]);
+    const monthIndex = Number(match[2]) - 1;
+
+    // Use noon on the first day in JST so the selected month is stable in every browser time zone.
+    return new Date(Date.UTC(year, monthIndex, 1, 3, 0, 0));
   }
 
+  // Without a preview parameter, always use the visitor's current clock and evaluate it in JST.
   return new Date();
 };
 
