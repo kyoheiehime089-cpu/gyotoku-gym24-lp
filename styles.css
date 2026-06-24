@@ -739,6 +739,11 @@ main {
   color: var(--coral-dark);
 }
 
+.pain-resolution p {
+  max-width: 900px;
+  margin-bottom: 0;
+}
+
 .solution-block {
   margin-top: 34px;
 }
