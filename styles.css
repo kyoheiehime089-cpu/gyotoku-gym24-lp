@@ -278,6 +278,8 @@ main {
 .pricing-campaign__title,
 .pricing-campaign__limit,
 .pricing-campaign__main,
+.pricing-campaign__condition,
+.pricing-campaign__detail,
 .pricing-campaign__note,
 .pricing-campaign__fee p {
   margin-bottom: 0;
@@ -319,51 +321,105 @@ main {
 
 .pricing-campaign__fees {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+  gap: 12px;
 }
 
 .pricing-campaign__fee {
   display: grid;
-  grid-template-columns: minmax(80px, auto) minmax(0, 1fr);
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 11px;
   align-items: center;
-  padding: 12px 14px;
+  padding: 15px;
+  border: 1px solid rgba(244, 106, 78, 0.22);
   border-radius: 8px;
   background: #fff4f1;
 }
 
+.pricing-campaign__fee:first-child {
+  grid-template-columns: 1fr;
+  gap: 11px;
+  padding: 16px;
+  border: 1px solid rgba(244, 106, 78, 0.36);
+  background: linear-gradient(135deg, #fff7ef 0%, #fffdf9 100%);
+  box-shadow: 0 10px 24px rgba(244, 106, 78, 0.1);
+}
+
 .pricing-campaign__fee span {
-  color: var(--navy);
-  font-size: 13px;
+  display: grid;
+  gap: 3px;
+  color: var(--coral-dark);
+  font-size: 15px;
   font-weight: 900;
+}
+
+.pricing-campaign__fee:first-child span {
+  font-size: 16px;
+}
+
+.pricing-campaign__fee span::before {
+  content: "通常";
+  width: fit-content;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(244, 106, 78, 0.12);
+  color: var(--coral-dark);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
 }
 
 .pricing-campaign__fee p {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 8px;
   align-items: baseline;
-  justify-content: flex-end;
+  justify-content: flex-start;
   color: var(--coral-dark);
   font-weight: 900;
 }
 
+.pricing-campaign__fee:first-child p {
+  gap: 10px;
+  justify-content: flex-start;
+}
+
 .pricing-campaign__fee del {
   color: rgba(24, 50, 75, 0.55);
-  font-size: 14px;
+  font-size: clamp(22px, 3vw, 28px);
   text-decoration-thickness: 2px;
+}
+
+.pricing-campaign__fee:first-child del {
+  color: rgba(24, 50, 75, 0.6);
+  font-size: clamp(25px, 3.8vw, 34px);
+  line-height: 1;
 }
 
 .pricing-campaign__fee em {
   color: var(--teal-dark);
+  font-size: clamp(20px, 2.6vw, 27px);
   font-style: normal;
+}
+
+.pricing-campaign__fee:first-child em {
+  color: var(--coral-dark);
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1;
 }
 
 .pricing-campaign__fee strong {
   color: var(--coral-dark);
-  font-size: 28px;
+  font-size: clamp(36px, 5vw, 48px);
   line-height: 1;
+  text-shadow: 0 6px 14px rgba(244, 106, 78, 0.12);
+}
+
+.pricing-campaign__fee:first-child strong {
+  color: var(--coral-dark);
+  font-size: clamp(42px, 6.2vw, 58px);
+  letter-spacing: 0;
+  text-shadow: 0 7px 16px rgba(244, 106, 78, 0.14);
 }
 
 .pricing-campaign__extras {
@@ -384,9 +440,41 @@ main {
   font-weight: 900;
 }
 
-.pricing-campaign__note {
+.pricing-campaign__condition {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border: 1px solid rgba(44, 137, 135, 0.18);
+  border-radius: 8px;
+  background: #eef8f8;
+  color: var(--teal-dark);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.pricing-campaign__condition strong,
+.pricing-campaign__condition span {
+  display: block;
+}
+
+.pricing-campaign__condition strong {
+  font-weight: 900;
+}
+
+.pricing-campaign__condition span {
+  font-weight: 800;
+}
+
+.pricing-campaign__detail {
   color: rgba(24, 50, 75, 0.84);
   font-size: 13px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.pricing-campaign__note {
+  color: rgba(24, 50, 75, 0.68);
+  font-size: 12px;
   font-weight: 700;
   line-height: 1.7;
 }
@@ -1688,16 +1776,67 @@ main {
   }
 
   .pricing-campaign__fee {
-    grid-template-columns: 82px minmax(0, 1fr);
-    padding: 9px 10px;
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .pricing-campaign__fee:first-child {
+    grid-template-columns: 1fr;
+    gap: 9px;
+    padding: 14px;
+  }
+
+  .pricing-campaign__fee span {
+    font-size: 14px;
+  }
+
+  .pricing-campaign__fee:first-child span {
+    font-size: 15px;
+  }
+
+  .pricing-campaign__fee p,
+  .pricing-campaign__fee:first-child p {
+    gap: 8px;
+  }
+
+  .pricing-campaign__fee del {
+    font-size: 22px;
+  }
+
+  .pricing-campaign__fee:first-child del {
+    font-size: 25px;
+  }
+
+  .pricing-campaign__fee em {
+    font-size: 21px;
+  }
+
+  .pricing-campaign__fee:first-child em {
+    font-size: 23px;
   }
 
   .pricing-campaign__fee strong {
-    font-size: 24px;
+    font-size: 39px;
+  }
+
+  .pricing-campaign__fee:first-child strong {
+    font-size: 46px;
+  }
+
+  .pricing-campaign__condition {
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .pricing-campaign__detail {
+    font-size: 12px;
+    line-height: 1.55;
   }
 
   .pricing-campaign__note {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.55;
   }
 
