@@ -36,7 +36,7 @@
 
       #section-root .owner__portrait img {
         display: block !important;
-        width: min(100%, 720px) !important;
+        width: 100% !important;
         height: auto !important;
         max-height: none !important;
         object-fit: contain !important;
@@ -91,6 +91,10 @@
 
           extractedSection.querySelectorAll("img").forEach((image) => {
             const src = image.getAttribute("src");
+            if (src && src.includes("owner-kyohei.png")) {
+              image.setAttribute("src", "../free-lp/assets/images/owner-kyohei.png?v=3");
+              return;
+            }
             if (src && !src.startsWith("http") && !src.startsWith("/")) {
               image.setAttribute("src", new URL(src, new URL(sourceUrl, location.href)).href);
             }
