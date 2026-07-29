@@ -5,211 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="行徳ジム24を無料で利用できるようにした理由と、オーナーの思いをご紹介します。"
+      content="行徳ジム24のLPから、なぜ無料で使えるようにしたのかの部分だけを表示します。"
     />
     <title>なぜ行徳ジム24を無料にしたのか</title>
+    <link rel="stylesheet" href="../free-lp/styles.css" />
     <style>
-      :root {
-        color-scheme: light;
-        --ink: #163143;
-        --muted: #556874;
-        --accent: #1b6586;
-        --surface: #ffffff;
-        --page: #eef4f7;
-        --line: #d7e2e8;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
       html,
       body {
         margin: 0;
         min-height: 100%;
-        background: var(--page);
-        color: var(--ink);
-        font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
-          "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+        overflow-x: hidden;
+        background: #eef4f7;
       }
 
       body {
-        padding: 24px 16px 48px;
+        padding: 0;
       }
 
-      main {
-        width: min(1040px, 100%);
-        margin: 0 auto;
+      #section-root {
+        min-height: 100vh;
       }
 
-      article {
-        overflow: hidden;
-        background: var(--surface);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        box-shadow: 0 18px 46px rgba(22, 49, 67, 0.08);
-      }
-
-      .content {
-        display: grid;
-        gap: 28px;
-        padding: 30px 22px 34px;
-      }
-
-      h1 {
+      #section-root > .section--owner {
         margin: 0;
-        font-size: clamp(28px, 7vw, 46px);
-        line-height: 1.3;
-        letter-spacing: 0.01em;
       }
 
-      h1 span {
-        color: var(--accent);
+      #section-root .owner__portrait {
+        overflow: visible !important;
       }
 
-      .portrait {
-        margin: 0;
-        text-align: center;
+      #section-root .owner__portrait img {
+        display: block !important;
+        width: min(100%, 720px) !important;
+        height: auto !important;
+        max-height: none !important;
+        object-fit: contain !important;
+        object-position: center !important;
+        margin: 0 auto !important;
       }
 
-      .portrait-frame {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        padding: 16px;
-        background: #f5f8fa;
-        border-radius: 18px;
-      }
-
-      .portrait img {
-        display: block;
-        width: 100%;
-        max-width: 420px;
-        height: auto;
-        max-height: none;
-        margin: 0 auto;
-        object-fit: contain;
-        object-position: center;
-      }
-
-      .portrait figcaption {
-        margin-top: 10px;
-        font-weight: 800;
-        color: var(--ink);
-      }
-
-      .copy {
-        font-size: 16px;
-        line-height: 1.9;
-        color: var(--muted);
-      }
-
-      .copy p {
-        margin: 0 0 1.15em;
-      }
-
-      .copy p:last-child {
-        margin-bottom: 0;
-      }
-
-      blockquote {
-        margin: 24px 0;
-        padding: 18px 20px;
-        border-left: 5px solid var(--accent);
-        background: #f2f7fa;
-        color: var(--ink);
-        font-size: 18px;
-        font-weight: 800;
-        line-height: 1.7;
-      }
-
-      @media (min-width: 800px) {
-        body {
-          padding: 48px 28px 64px;
-        }
-
-        .content {
-          grid-template-columns: minmax(0, 1fr) 360px;
-          grid-template-areas:
-            "title portrait"
-            "copy portrait";
-          column-gap: 56px;
-          align-items: start;
-          padding: 54px 56px 58px;
-        }
-
-        h1 {
-          grid-area: title;
-        }
-
-        .copy {
-          grid-area: copy;
-          font-size: 17px;
-        }
-
-        .portrait {
-          grid-area: portrait;
-          position: sticky;
-          top: 32px;
-        }
+      .loading,
+      .error {
+        width: min(720px, calc(100% - 32px));
+        margin: 48px auto;
+        padding: 24px;
+        background: #fff;
+        border-radius: 16px;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN",
+          "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+        line-height: 1.8;
+        color: #163143;
       }
     </style>
   </head>
   <body>
-    <main>
-      <article>
-        <div class="content">
-          <h1>なぜ、<span>行徳ジム24を無料</span>で使えるようにしたのか。</h1>
-
-          <figure class="portrait">
-            <div class="portrait-frame">
-              <img
-                src="../free-lp/assets/images/owner-kyohei.png?v=2"
-                width="720"
-                height="720"
-                alt="行徳ジム24のオーナー"
-              />
-            </div>
-            <figcaption>オーナー</figcaption>
-          </figure>
-
-          <div class="copy">
-            <p>行徳には24時間ジムがいくつもあります。</p>
-
-            <p>
-              それでも、入会したものの続かなかった方や、人目や混雑が気になって通えなくなった方を、私はこれまで多く見てきました。
-            </p>
-
-            <p>
-              続かなかったのは、意志が弱いからではなく、その人に環境が合っていなかっただけかもしれません。
-            </p>
-
-            <p>
-              人目を気にせず、予約した時間に落ち着いて利用できる場所を作りたい。料金を理由に、運動を始めることを諦めてほしくない。そう考えるようになりました。
-            </p>
-
-            <p>
-              同じ施設内では、少人数制ヨガと、最大5名のセミパーソナルジムを通常営業しています。開業から2年が経過し、おかげさまでセミパーソナルジムは行徳地域で最も多くの会員様にご利用いただける施設となりました。既存事業で施設運営が成り立っているため、空いている時間を遊ばせておくのではなく、地域の方限定で無料開放することにしました。
-            </p>
-
-            <p>
-              私たちが調べた限りでは、民間事業者が地域住民の方へ、継続的に無料で貸切ジムを提供している取り組みは、現時点の日本ではおそらく他にありません。
-            </p>
-
-            <blockquote>探しても見つからなかったので、それなら自分たちで作ろうと思いました。</blockquote>
-
-            <p>
-              地域の方に気軽に運動できる場所を作りたい。行徳周辺の方が運動を始めるきっかけになればという思いで、この無料利用枠を用意しています。
-            </p>
-
-            <p>
-              この無料利用を継続するため、運営コストはできるだけ抑えるよう工夫しています。予約システムなども自社で開発・運営しているため、不具合が発生する場合があります。その際はできるだけ早く改善いたしますので、温かく見守っていただけますと幸いです。
-            </p>
-          </div>
-        </div>
-      </article>
+    <main id="section-root" aria-live="polite">
+      <p class="loading">読み込み中です。</p>
     </main>
+
+    <script>
+      (async () => {
+        const root = document.getElementById("section-root");
+        const sourceUrl = "../free-lp/index.html";
+
+        try {
+          const response = await fetch(sourceUrl, { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error(`LPを取得できませんでした: ${response.status}`);
+          }
+
+          const html = await response.text();
+          const sourceDocument = new DOMParser().parseFromString(html, "text/html");
+          const section = sourceDocument.querySelector("#why-free");
+
+          if (!section) {
+            throw new Error("対象セクションが見つかりませんでした。");
+          }
+
+          sourceDocument.querySelectorAll("style").forEach((style) => {
+            document.head.appendChild(style.cloneNode(true));
+          });
+
+          const extractedSection = section.cloneNode(true);
+
+          extractedSection.querySelectorAll("img").forEach((image) => {
+            const src = image.getAttribute("src");
+            if (src && !src.startsWith("http") && !src.startsWith("/")) {
+              image.setAttribute("src", new URL(src, new URL(sourceUrl, location.href)).href);
+            }
+
+            const srcset = image.getAttribute("srcset");
+            if (srcset) {
+              const resolved = srcset
+                .split(",")
+                .map((entry) => {
+                  const parts = entry.trim().split(/\s+/);
+                  const url = parts.shift();
+                  if (!url) return entry;
+                  const absolute = url.startsWith("http") || url.startsWith("/")
+                    ? url
+                    : new URL(url, new URL(sourceUrl, location.href)).href;
+                  return [absolute, ...parts].join(" ");
+                })
+                .join(", ");
+              image.setAttribute("srcset", resolved);
+            }
+          });
+
+          extractedSection.querySelectorAll("source").forEach((source) => {
+            const srcset = source.getAttribute("srcset");
+            if (!srcset) return;
+            const resolved = srcset
+              .split(",")
+              .map((entry) => {
+                const parts = entry.trim().split(/\s+/);
+                const url = parts.shift();
+                if (!url) return entry;
+                const absolute = url.startsWith("http") || url.startsWith("/")
+                  ? url
+                  : new URL(url, new URL(sourceUrl, location.href)).href;
+                return [absolute, ...parts].join(" ");
+              })
+              .join(", ");
+            source.setAttribute("srcset", resolved);
+          });
+
+          root.replaceChildren(extractedSection);
+        } catch (error) {
+          console.error(error);
+          root.innerHTML =
+            '<p class="error">ページを読み込めませんでした。少し時間をおいて、もう一度開いてください。</p>';
+        }
+      })();
+    </script>
   </body>
 </html>
